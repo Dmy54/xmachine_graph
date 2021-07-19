@@ -28,3 +28,9 @@ requests           2.26.0
 setuptools         57.2.0
 six                1.16.0
 urllib3            1.26.6
+
+pip install matplotlib
+            pyserial
+            numpy
+            kivy
+            https://github.com/kivy-garden/graph/archive/master.zip

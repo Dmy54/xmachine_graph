@@ -1,6 +1,34 @@
+#:import MeshLinePlot kivy.garden.graph.MeshLinePlot
 
-<MVPPage>:
-    Button:
-        text: 'asd'
+<SetGraph>:
+    graph_test : graph_test
+    Graph:
+        id: graph_test
+        plot: MeshLinePlot
+        xlabel:'Повторение'
+        ylabel:'real and expected force'
+        x_ticks_major:10
+        y_ticks_major:1
+        y_grid_label:True
+        x_grid_label:True
+        padding:5
+        x_grid:True
+        y_grid:True
+        xmin:-0
+        xmax:100
+        ymin:-10
+        ymax:10
+        pos: 0, root.height / 6
+        size: root.width * 2 / 3 , root.height * 18 / 24
+
+
+<MVPPage>
     BoxLayout:
-        id: graph
+        pos: 400, 400
+        Button:
+            text: 'asd'
+
+    BoxLayout:
+        size: 800, 600
+        pos: 100, 100
+        SetGraph:
