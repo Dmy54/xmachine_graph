@@ -2,13 +2,22 @@
 
 <MVPPage>
     BoxLayout:
-        pos: 400, 400
+        pos: 600, 400
         Button:
-            text: 'bye'
-            on_press: root.hello()
-            id: hello_button
+            text: 'clear'
+            on_press: root.clear_main_graph()
+            id: clear_button
+
+    BoxLayout:
+        pos: 600, 200
+        Button:
+            text: 'start'
+            on_press: root.start_main_graph()
+            id: start_button
+
 
     BoxLayout:
         size: 800, 600
         pos: 100, 100
         SetGraph:
+            id: graph_x

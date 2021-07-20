@@ -5,5 +5,8 @@ class MVPPage(Widget):
     def build(self):
         return self
 
-    def hello(self):
-        self.ids['hello_button'].text = 'hello'
+    def clear_main_graph(self):
+        self.ids['graph_x'].clear_graph()
+
+    def start_main_graph(self):
+        self.ids['graph_x'].start()
