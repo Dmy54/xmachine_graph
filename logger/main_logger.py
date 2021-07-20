@@ -12,6 +12,7 @@ def logger(function_to_decorate):
 
     return wrapper
 
+
 def managed_logger(arg1):
     def decorator(func):
         def wrapper(*args):
@@ -35,7 +36,6 @@ def managed_logger(arg1):
 @managed_logger('1')
 def func2(a):
     print(a)
-
 
 
 @logger

@@ -1,0 +1,14 @@
+#: include ./components/SetGraph/SetGraph.kv
+
+<MVPPage>
+    BoxLayout:
+        pos: 400, 400
+        Button:
+            text: 'bye'
+            on_press: root.hello()
+            id: hello_button
+
+    BoxLayout:
+        size: 800, 600
+        pos: 100, 100
+        SetGraph:
