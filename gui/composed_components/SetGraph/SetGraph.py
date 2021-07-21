@@ -8,14 +8,20 @@ class SetGraph(Widget):
     def __init__(self, **kwargs):
         super(SetGraph, self).__init__(**kwargs)
 
-        self.plot1 = MeshLinePlot(color=[1, 0, 0, 1])
-        self.plot2 = MeshLinePlot(color=[1, 1, 0, 1])
+        self.color_red = [1, 0, 0, 1]
+        self.color_yellow = [1, 1, 0, 1]
+
+        self.update_graph_time = 1 / 10
+
+        self.plot1 = MeshLinePlot(color=self.color_red)
+        self.plot2 = MeshLinePlot(color=self.color_yellow)
         self.max_x_plot = 0
 
 
     def start(self):
+        '''запуск обновления графика'''
         Clock.unschedule(self.update_graph)
-        Clock.schedule_interval(self.update_graph, 1 / 10)
+        Clock.schedule_interval(self.update_graph, self.update_graph_time)
 
     def stop(self):
         Clock.unschedule(self.update_graph)

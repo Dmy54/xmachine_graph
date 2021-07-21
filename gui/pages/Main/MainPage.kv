@@ -1,0 +1,22 @@
+#: include ./composed_components/Indicator/Indicator.kv
+
+
+<MainPage>
+
+    GridLayout:
+        size: root.size
+        cols: 4
+        rows: 1
+        padding: 10, 0
+        Indicator:
+            id: real_force
+        Indicator:
+            id: exp_force
+        Indicator:
+            id: rel_force
+        Indicator:
+            id: k_f_scale
+
+
+
+
