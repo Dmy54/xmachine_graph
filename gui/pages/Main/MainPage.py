@@ -1,11 +1,16 @@
 from kivy.uix.widget import Widget
 from gui.composed_components.Indicator.Indicator import Indicator
+from kivy.clock import Clock
+import random
 
 class MainPage(Widget):
 
     def build(self):
-        self.ids["real_force"].set_text('1.0', 'real force')
-        self.ids["exp_force"].set_text('1.0', 'exp_force')
-        self.ids["rel_force"].set_text('1.0', 'rel_force')
-        self.ids["k_f_scale"].set_text('1.0', 'k_f_scale')
+        Clock.schedule_interval(self.work_imitation, 1/20)
         return self
+
+    def work_imitation(self, *args):
+        self.ids["real_force"].level = random.uniform(0, 1)
+        self.ids["exp_force"].level = random.uniform(0, 1)
+        self.ids["rel_force"].level = random.uniform(0, 1)
+        self.ids["k_f_scale"].level = random.uniform(0, 1)

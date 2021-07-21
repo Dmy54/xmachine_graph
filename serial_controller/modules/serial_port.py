@@ -30,7 +30,7 @@ class SerialPort(Serial):
         '''Метод автоматического определение порта передачи'''
         ports = list(serial.tools.list_ports.comports())
         for p in ports:
-            print(p)
+            return p
 
     def connect(self):
         '''Открывает порт, Расширение метода Serial.open(), для собственного обработчика ошибок'''
@@ -57,4 +57,3 @@ class SerialPort(Serial):
 
     def get(self):
         pass
-

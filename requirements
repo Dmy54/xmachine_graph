@@ -1,36 +1,8 @@
 python 3.9
 
-Package            Version
------------------- ----------
-certifi            2021.5.30
-charset-normalizer 2.0.3
-cycler             0.10.0
-docutils           0.17.1
-idna               3.2
-Kivy               2.0.0
-kivy-deps.angle    0.3.0
-kivy-deps.glew     0.3.0
-kivy-deps.sdl2     0.3.1
-Kivy-Garden        0.1.4
-kivy-garden.graph  0.4.1.dev0
-kiwisolver         1.3.1
-matplotlib         3.4.2
-numpy              1.21.0
-Pillow             8.3.1
-pip                21.1.3
-Pygments           2.9.0
-pyparsing          2.4.7
-pypiwin32          223
-pyserial           3.5
-python-dateutil    2.8.2
-pywin32            301
-requests           2.26.0
-setuptools         57.2.0
-six                1.16.0
-urllib3            1.26.6
-
-pip install matplotlib
-            pyserial
-            numpy
+pip install pyserial
             kivy
             https://github.com/kivy-garden/graph/archive/master.zip
+
+
+garden install graph
