@@ -4,6 +4,7 @@ from gui.components.LabelWithBorder.LabelWithBorder import LabelWithBorder
 from gui.components.VolumeLevel.VolumeLevel import VolumeLevel
 from kivy.clock import Clock
 
+
 class Indicator(BoxLayout):
     header_label_text = StringProperty("0.0")
     footer_label_text = StringProperty("-")
